@@ -3,6 +3,7 @@
 ### =========================================================
 
 @baseUrl = http://localhost:3000/api/courses
+@courseId = 6ab701a6a67fbbe48e623a7d
 
 
 ### 1. OBTENER TODOS LOS CURSOS
@@ -26,13 +27,11 @@ Content-Type: application/json
 
 
 ### 3. OBTENER UN CURSO POR ID
-### Sustituir COURSE_ID por un ID real de MongoDB
-GET {{baseUrl}}/COURSE_ID
+GET {{baseUrl}}/{{courseId}}
 
 
 ### 4. ACTUALIZAR UN CURSO
-### Sustituir COURSE_ID por un ID real de MongoDB
-PUT {{baseUrl}}/COURSE_ID
+PUT {{baseUrl}}/{{courseId}}
 Content-Type: application/json
 
 {
@@ -48,8 +47,7 @@ Content-Type: application/json
 
 
 ### 5. ELIMINAR UN CURSO
-### Sustituir COURSE_ID por un ID real de MongoDB
-DELETE {{baseUrl}}/COURSE_ID
+DELETE {{baseUrl}}/{{courseId}}
 
 
 ### 6. PROBAR ID INVÁLIDO

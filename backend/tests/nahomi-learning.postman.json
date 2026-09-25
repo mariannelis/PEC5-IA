@@ -1,0 +1,111 @@
+{
+  "info": {
+    "name": "Nahomi Learning API",
+    "description": "Colección de pruebas para el CRUD de cursos de Nahomi Learning.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000/api/courses"
+    },
+    {
+      "key": "courseId",
+      "value": "REEMPLAZAR_CON_ID_REAL"
+    }
+  ],
+  "item": [
+    {
+      "name": "Obtener todos los cursos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}",
+          "host": [
+            "{{baseUrl}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Crear curso",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Introducción a la Inteligencia Artificial\",\n  \"description\": \"Curso básico para aprender qué es la inteligencia artificial.\",\n  \"category\": \"Inteligencia Artificial\",\n  \"recommendedAge\": \"8-12 años\",\n  \"level\": \"Principiante\",\n  \"duration\": \"30 minutos\",\n  \"content\": \"En este curso aprenderás qué es la inteligencia artificial.\",\n  \"image\": \"\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}",
+          "host": [
+            "{{baseUrl}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Obtener curso por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/{{courseId}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "{{courseId}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Actualizar curso",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Introducción a la IA para niños\",\n  \"description\": \"Curso actualizado de inteligencia artificial para niños.\",\n  \"category\": \"Inteligencia Artificial\",\n  \"recommendedAge\": \"8-12 años\",\n  \"level\": \"Principiante\",\n  \"duration\": \"40 minutos\",\n  \"content\": \"Aprenderás los conceptos básicos de la IA mediante ejemplos sencillos.\",\n  \"image\": \"\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/{{courseId}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "{{courseId}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Eliminar curso",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/{{courseId}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "{{courseId}}"
+          ]
+        }
+      }
+    }
+  ]
+}
