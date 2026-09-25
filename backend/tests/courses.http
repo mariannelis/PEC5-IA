@@ -1,0 +1,60 @@
+### =========================================================
+### NAHOMI LEARNING - PRUEBAS API COURSES
+### =========================================================
+
+@baseUrl = http://localhost:3000/api/courses
+
+
+### 1. OBTENER TODOS LOS CURSOS
+GET {{baseUrl}}
+
+
+### 2. CREAR UN CURSO
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "title": "Introducción a la Inteligencia Artificial",
+  "description": "Curso básico para aprender qué es la inteligencia artificial.",
+  "category": "Inteligencia Artificial",
+  "recommendedAge": "8-12 años",
+  "level": "Principiante",
+  "duration": "30 minutos",
+  "content": "En este curso aprenderás qué es la inteligencia artificial, dónde se utiliza y cómo puede ayudar a las personas.",
+  "image": "https://example.com/ia.jpg"
+}
+
+
+### 3. OBTENER UN CURSO POR ID
+### Sustituir COURSE_ID por un ID real de MongoDB
+GET {{baseUrl}}/COURSE_ID
+
+
+### 4. ACTUALIZAR UN CURSO
+### Sustituir COURSE_ID por un ID real de MongoDB
+PUT {{baseUrl}}/COURSE_ID
+Content-Type: application/json
+
+{
+  "title": "Introducción a la IA para niños",
+  "description": "Curso actualizado de inteligencia artificial para niños.",
+  "category": "Inteligencia Artificial",
+  "recommendedAge": "8-12 años",
+  "level": "Principiante",
+  "duration": "40 minutos",
+  "content": "Aprenderás los conceptos básicos de la IA mediante ejemplos sencillos.",
+  "image": "https://example.com/ia-actualizada.jpg"
+}
+
+
+### 5. ELIMINAR UN CURSO
+### Sustituir COURSE_ID por un ID real de MongoDB
+DELETE {{baseUrl}}/COURSE_ID
+
+
+### 6. PROBAR ID INVÁLIDO
+GET {{baseUrl}}/123
+
+
+### 7. PROBAR RUTA INEXISTENTE
+GET http://localhost:3000/api/no-existe
