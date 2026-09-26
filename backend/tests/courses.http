@@ -1,6 +1,4 @@
-### =========================================================
 ### NAHOMI LEARNING - PRUEBAS API COURSES
-### =========================================================
 
 @baseUrl = http://localhost:3000/api/courses
 @courseId = 6ab701a6a67fbbe48e623a7d
