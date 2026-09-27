@@ -220,15 +220,15 @@ const App = () => {
                 </button>
               </div>
 
-{viewedCourse.image && (
-        <div className="mb-8 overflow-hidden rounded-3xl bg-slate-300">
-          <img
-            src={viewedCourse.image}
-            alt={viewedCourse.title}
-            className="h-100 w-full object-cover"
-          />
-        </div>
-      )}
+              {viewedCourse.image && (
+                <div className="mb-8 overflow-hidden rounded-3xl bg-slate-300">
+                  <img
+                    src={viewedCourse.image}
+                    alt={viewedCourse.title}
+                    className="h-100 w-full object-cover"
+                  />
+                </div>
+              )}
               <p className="mb-6 text-slate-600">
                 {viewedCourse.description}
               </p>
