@@ -96,6 +96,10 @@ https://backendpec5.vercel.app/
 API de cursos
 https://backendpec5.vercel.app/api/courses
 
+Repositorio:
+https://github.com/mariannelis/PEC5-IA
+
+
 Instalación
 Backend
 cd backend
@@ -128,11 +132,11 @@ Endpoints de la API
 Uso de Inteligencia Artificial:
 Durante el desarrollo se utilizó ChatGPT como herramienta de apoyo.
 Se utilizó para:
-- Analizar los requisitos de la PEC.
+
 - Revisar código.
 - Resolver errores.
 - Apoyar la conexión entre React, Express y MongoDB.
-El código generado con ayuda de IA fue revisado, probado y modificado antes de incorporarlo al proyecto.
+El código generado con ayuda deIA fue revisado, probado y modificado antes de incorporarlo al proyecto.
 
 Ejemplos de prompts utilizados
 - "Revisa este controlador CRUD."
