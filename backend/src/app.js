@@ -2,6 +2,7 @@
 const express = require('express');
 const cors = require('cors');
 
+const connectDB = require('./config/db');
 const courseRoutes = require('./routes/course.routes');
 const notFound = require('./middleware/notFound');
 const errorHandler = require('./middleware/errorHandler');
@@ -20,14 +21,24 @@ app.get('/', (req, res) => {
   });
 });
 
-// 5. Rutas de la API
+// 5. Conexión a MongoDB para rutas de cursos
+app.use('/api/courses', async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (error) {
+    next(error);
+  }
+});
+
+// 6. Rutas de la API
 app.use('/api/courses', courseRoutes);
 
-// 6. Middleware 404
+// 7. Middleware 404
 app.use(notFound);
 
-// 7. Middleware general de errores
+// 8. Middleware general de errores
 app.use(errorHandler);
 
-// 8. Export
+// 9. Export
 module.exports = app;
